@@ -1,0 +1,19 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My Test Site'
+theme = "hugo-PaperMod"
+
+
+[params.homeInfoParams]
+
+Title = "Home Page"
+Content = "Main Page Second Page" 
+image = "static/mytwocats.jpg"
+
+[cover]
+image = "testsite/static/mytwocats.jpg"
+alt = "<cats>"
+
+[links]
+
+MainPage = "http://localhost:1313/mainpage/"
