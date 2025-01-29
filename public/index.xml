@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>My Test Site</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My Test Site</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Jan 2025 07:25:47 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secondpage</title>
+      <link>http://localhost:1313/secondpage/</link>
+      <pubDate>Wed, 29 Jan 2025 07:25:47 -0500</pubDate>
+      <guid>http://localhost:1313/secondpage/</guid>
+      <description>&lt;p&gt;Second page sample text.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mainpage</title>
+      <link>http://localhost:1313/mainpage/</link>
+      <pubDate>Wed, 29 Jan 2025 07:25:31 -0500</pubDate>
+      <guid>http://localhost:1313/mainpage/</guid>
+      <description>&lt;p&gt;Here is some sample text. I will add another sentence.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
