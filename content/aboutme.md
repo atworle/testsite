@@ -4,7 +4,7 @@ draft = true
 title = 'About Me'
 +++
 
-![pictureofantonioworley](/antonioworley.jpg)
+![headshotofantonioworley](/antonioworley.jpg)
 
 ## Bio
 

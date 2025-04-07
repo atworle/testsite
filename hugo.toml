@@ -1,19 +1,37 @@
-baseURL = 'https://example.org/'
+baseURL = "https://example.org/"
 languageCode = 'en-us'
-title = 'My Test Site'
+title = "Antonio Thomas Worley"
 theme = "hugo-PaperMod"
 
+[outputs]
+home = [ "html", "RSS", "JSON" ]
 
 [params.homeInfoParams]
 
-Title = "Home Page"
-Content = "Main Page Second Page" 
-image = "static/mytwocats.jpg"
+Title = "Welcome"
+Content = "This is a test site that I will eventually develop into a functioning site." 
 
-[cover]
-image = "testsite/static/mytwocats.jpg"
-alt = "<cats>"
+[[menu.main]]
+name = "About Me"
+url = "http://localhost:1313/aboutme" 
+weight = "5" 
 
-[links]
+[[menu.main]]
+name = "Blog"
+url = "http://localhost:1313/blog"
+weight = "5"
 
-MainPage = "http://localhost:1313/mainpage/"
+[[menu.main]]
+name = "CV"
+url = "http://localhost:1313/cv"
+weight = "5"
+
+[[menu.main]]
+name = "Archives"
+url = "http://localhost:1313/archives"
+weight = "5"
+
+[[menu.main]]
+name = "Searchpage"
+url = "http://localhost:1313/Searchpage"
+wegith = "5"
