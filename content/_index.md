@@ -5,17 +5,15 @@ title = 'Homepage'
 +++
 
 
-{{< img src="/antonioworley.jpg" alt="Antonio Worley" width="300" style= float :right ; margin-left: 20px;" >}}
+<div style="overflow: auto;">
+  <img src="/antonioworley.jpg" alt="Antonio Worley" width="300" style="float: left; margin-right: 20px;">
+
+## About Me
+
+My Name is Antonio Thomas Worley. I am a history Master's student at Clemson University.
+
+My research focuses on 18th century America and the early republic period. I have a particular interest in the creation, circulation, and evolution of ideas, especially in the way they affect the social mind. I have a deep interest in digital history and the use of computational text analysis to reveal patterns of social and polticial thought. 
+
+</div>
 
 
-
-
-
-
-## Bio
-
-My Name is Antonio Thomas Worley. I am a history Master's student at Clemson University. I have lived in California, Oklahoma and South Carolina but I claim South Carolina as my home. 
-
-## Academics
-
-I have focused my studies on 18th century America as well as the early republic period. I am interested in the creation and movement of ideas. I also have an interested in digital history. I am interested in using computational text analysis to reveal patterns of social thought. 
