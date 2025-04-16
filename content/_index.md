@@ -17,3 +17,6 @@ My research focuses on 18th century America and the early republic period. I hav
 </div>
 
 
+<br><br><br><br><br>
+<h3 style="text-align: center;">
+Blog Posts

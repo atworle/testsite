@@ -8,10 +8,6 @@ home = [ "html", "RSS", "JSON" ]
 
 [params.homeInfoParams]
 
-[[menu.main]]
-name = "Blog"
-url = "http://localhost:1313/blog"
-weight = "5"
 
 [[menu.main]]
 name = "CV"
@@ -24,9 +20,9 @@ url = "http://localhost:1313/archives"
 weight = "5"
 
 [[menu.main]]
-name = "Searchpage"
+name = "Search Page"
 url = "http://localhost:1313/Searchpage"
-wegith = "5"
+weight = "5"
 
 [markup]
   [markup.goldmark]

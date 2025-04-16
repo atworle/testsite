@@ -34,6 +34,7 @@ title = 'Networks'
 
 
 ## Bibliography
+
 Ahnert, Ruth, Sebastian E. Ahnert, Catherine Nicole Coleman, and Scott B. Weingart. The Network Turn: Changing Perspectives in the Humanities. Cambridge: Cambridge University Press, 2021. https://doi.org/10.1017/9781108866804   Accessed feb 25 2025
 
 Ryan Cordell and David Smith, Viral Texts: Mapping Networks of Reprinting in 19th-Century Newspapers and Magazines (2024), http://viraltexts.org. 
