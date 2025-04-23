@@ -1,0 +1,86 @@
++++
+date = '2025-01-29T17:37:31-05:00'
+draft = true
+title = 'C.V.'
+hideMeta = true
++++
+
+## **Antonio Thomas Worley**
+
+atworle@g.clemson.edu • [linkedin.com/in/antonio-worley-990429347](https://www.linkedin.com/in/antonio-worley-990429347) • [github.com/atworle](https://github.com/atworle)
+
+---
+
+### **EDUCATION**
+
+**M.A. in History**  
+ *Clemson University, Clemson, SC* — Expected May 2026  
+ • Thesis: *"Tracking Tyranny in the New Hampshire Gazette"*
+
+**B.A. in History**  
+ *Clemson University, Clemson, SC* — May 2023  
+ • Senior Thesis: *"Counterfeit Currency’s Role in Forming the American Identity"*  
+ • Minor: French Studies
+
+---
+
+### **RESEARCH INTERESTS**
+
+Digital historical methods • Text mining • 18th- and 19th-century political discourse • Patterns of social and political thought
+
+---
+
+### **DIGITAL PROJECTS**
+
+**Adobe Express Site on Digital Historical Thinking** *(2024)*  
+ • Created an interactive site exploring metadata, digital archives, and text mining  
+ • Emphasized digital historical thinking and introductory digital methods
+
+[https://new.express.adobe.com/webpage/MKbAngLEH7jQa](https://new.express.adobe.com/webpage/MKbAngLEH7jQa) 
+
+**Tracking Reconstruction in the New York Herald** *(2025)*  
+ • Scraped and cleaned OCR data to track language changes following the Panic of 1873  
+ • Applied text mining and word embedding techniques to analyze evolving political narratives
+
+[https://github.com/atworle/1873nyherald](https://github.com/atworle/1873nyherald) 
+
+---
+
+### **TEACHING EXPERIENCE**
+
+**Teaching Assistant – Environmental History**  
+ *Clemson University* — Fall 2024
+
+**Teaching Assistant – U.S. History to 1877**  
+ *Clemson University* — Spring 2025
+
+---
+
+### **Selected Writing**
+
+• *“Counterfeit Currency’s Role in Forming the American Identity”* – Senior Thesis ([https://docs.google.com/document/d/1nVVRH4K03O25uoHZ\_3gWJUeVKSy6lhPu/edit?usp=sharing\&ouid=114985796653065328574\&rtpof=true\&sd=true](https://docs.google.com/document/d/1nVVRH4K03O25uoHZ_3gWJUeVKSy6lhPu/edit?usp=sharing&ouid=114985796653065328574&rtpof=true&sd=true))
+
+* Conducted a comprehensive study on colonial American counterfeiting trends, exploring the legal punishments for counterfeiting, the development and emission of paper money, and the visual analysis of colonial currency. The project examined the economic and political implications of counterfeiting and its role in shaping early American financial systems and autonomy from British mercantilism.
+
+• *“People, Newspapers, and the Press: the Social Dimension of an Ideo-political Machine”* – Historiography Paper ([https://docs.google.com/document/d/1hHhwfaJzA5LnR7YsV7zmDKUzNDy0a0FnRNpwfGj0QNA/edit?usp=sharing](https://docs.google.com/document/d/1hHhwfaJzA5LnR7YsV7zmDKUzNDy0a0FnRNpwfGj0QNA/edit?usp=sharing))
+
+* An in-depth analysis of the role of newspapers in the American Revolution, examining key historiographical works and contributing original insights on the political and social functions of colonial presses.
+
+### 
+
+### **SKILLS**
+
+**Tools & Programming**: R (tidytext), OCR Processing, Voyant Tools  
+ **Web & Design**: HTML, CSS, Adobe Express  
+ **Research**: Archival research, metadata structuring, primary source analysis, text mining
+
+---
+
+### **LANGUAGES**
+
+• English (native)  
+ • French (reading proficiency)
+
+
+
+[def]: https://github.com/atworle/1873nyherald
