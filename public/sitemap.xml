@@ -2,33 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/topic-models/</loc>
+    <loc>https://example.org/posts/topic-models/</loc>
     <lastmod>2025-03-29T07:29:52-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cv/</loc>
+    <loc>https://example.org/cv/</loc>
     <lastmod>2025-01-29T17:37:31-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://example.org/</loc>
     <lastmod>2025-01-29T07:29:52-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/networks/</loc>
+    <loc>https://example.org/posts/networks/</loc>
     <lastmod>2025-01-29T07:29:52-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://example.org/posts/</loc>
     <lastmod>2025-01-29T07:29:52-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/spatial-history/</loc>
+    <loc>https://example.org/posts/spatial-history/</loc>
     <lastmod>2025-01-29T07:29:52-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/embedding/</loc>
+    <loc>https://example.org/posts/embedding/</loc>
     <lastmod>2025-01-29T07:29:52-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://example.org/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://example.org/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/Searchpage/</loc>
+    <loc>https://example.org/Searchpage/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://example.org/tags/</loc>
   </url>
 </urlset>
