@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Topic Models | Antonio Thomas Worley</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+          Topic modeling is a complex method in theory but a fairly simple method in practice. In a conceptual sense, topic modeling consists of using algorithms to discover ‘topics’ in large bodies of text. In “Topic Modeling: A Basic Introduction”, Megan Brett explains topic modeling by referencing a twitter post during a conference which describes topic modeling as “a recurring pattern of co-occurring words”.1 Ben Schmidt attributes the ‘ease’ and ‘intuitiveness’ of topic models to underlying assumptions of coherency and stability.2 Coherency meaning that the list produced by a topic model algorithm contains words that are coherent in a list together, and stability, meaning if a topic exists in two different types of texts, the algorithm will have the ability to identify it.">
+<meta name="author" content="">
+<link rel="canonical" href="https://atworle.github.io/testsite/posts/topic-models/">
+<link crossorigin="anonymous" href="/testsite/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://atworle.github.io/testsite/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://atworle.github.io/testsite/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://atworle.github.io/testsite/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://atworle.github.io/testsite/apple-touch-icon.png">
+<link rel="mask-icon" href="https://atworle.github.io/testsite/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://atworle.github.io/testsite/posts/topic-models/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://atworle.github.io/testsite/posts/topic-models/">
+  <meta property="og:site_name" content="Antonio Thomas Worley">
+  <meta property="og:title" content="Topic Models">
+  <meta property="og:description" content="
+Topic modeling is a complex method in theory but a fairly simple method in practice. In a conceptual sense, topic modeling consists of using algorithms to discover ‘topics’ in large bodies of text. In “Topic Modeling: A Basic Introduction”, Megan Brett explains topic modeling by referencing a twitter post during a conference which describes topic modeling as “a recurring pattern of co-occurring words”.1 Ben Schmidt attributes the ‘ease’ and ‘intuitiveness’ of topic models to underlying assumptions of coherency and stability.2 Coherency meaning that the list produced by a topic model algorithm contains words that are coherent in a list together, and stability, meaning if a topic exists in two different types of texts, the algorithm will have the ability to identify it.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-29T07:29:52-05:00">
+    <meta property="article:modified_time" content="2025-03-29T07:29:52-05:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Topic Models">
+<meta name="twitter:description" content="
+          Topic modeling is a complex method in theory but a fairly simple method in practice. In a conceptual sense, topic modeling consists of using algorithms to discover ‘topics’ in large bodies of text. In “Topic Modeling: A Basic Introduction”, Megan Brett explains topic modeling by referencing a twitter post during a conference which describes topic modeling as “a recurring pattern of co-occurring words”.1 Ben Schmidt attributes the ‘ease’ and ‘intuitiveness’ of topic models to underlying assumptions of coherency and stability.2 Coherency meaning that the list produced by a topic model algorithm contains words that are coherent in a list together, and stability, meaning if a topic exists in two different types of texts, the algorithm will have the ability to identify it.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://atworle.github.io/testsite/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Topic Models",
+      "item": "https://atworle.github.io/testsite/posts/topic-models/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Topic Models",
+  "name": "Topic Models",
+  "description": "\nTopic modeling is a complex method in theory but a fairly simple method in practice. In a conceptual sense, topic modeling consists of using algorithms to discover ‘topics’ in large bodies of text. In “Topic Modeling: A Basic Introduction”, Megan Brett explains topic modeling by referencing a twitter post during a conference which describes topic modeling as “a recurring pattern of co-occurring words”.1 Ben Schmidt attributes the ‘ease’ and ‘intuitiveness’ of topic models to underlying assumptions of coherency and stability.2 Coherency meaning that the list produced by a topic model algorithm contains words that are coherent in a list together, and stability, meaning if a topic exists in two different types of texts, the algorithm will have the ability to identify it.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "\nTopic modeling is a complex method in theory but a fairly simple method in practice. In a conceptual sense, topic modeling consists of using algorithms to discover ‘topics’ in large bodies of text. In “Topic Modeling: A Basic Introduction”, Megan Brett explains topic modeling by referencing a twitter post during a conference which describes topic modeling as “a recurring pattern of co-occurring words”.1 Ben Schmidt attributes the ‘ease’ and ‘intuitiveness’ of topic models to underlying assumptions of coherency and stability.2 Coherency meaning that the list produced by a topic model algorithm contains words that are coherent in a list together, and stability, meaning if a topic exists in two different types of texts, the algorithm will have the ability to identify it.\nThe theory for topic modeling is relatively complicated for what the topic modeling actually produces. In a technical sense, topic modeling is a word modeling algorithm that matches words which co-occur frequently together across documents. There are various algorithms that topic model however the Latent Dirichlet Allocation, or LDA, is the one used most by humanists. LDA is a probabilistic model that functions based on two assumptions, that each document is a mix of topics and each topic is a mix of words. Probabilistic here means that the algorithm assigns probabilities for each word under a topic. So if election and president co-occur frequently then they will be grouped based on the probability that politics is a topic. There are varying levels of complexity to this process, for example you can select the number of topics and the number of words in each topic yourself and this can drastically alter the results.\nIt’s important to note a few things about this process. For one, the algorithm does not assign topic names, it simply groups words together. So the name of the topic is at the discretion of the researcher. Also, a document in this context is not necessarily a full document; it could be a paragraph or a page. However, the document is treated as a ‘bag of words’, meaning the order of the words does not factor into the algorithm’s calculation. Most importantly, as Schmidt points out, topic modeling only captures co-occurrence, it does not take into account the nuances of syntax, rhetoric, or figurative language.3\nThe possible uses are fairly distinct for history, however some scholars have attempted to discover new uses.4 The main utility of topic modeling lies in evaluating large corpuses, a corpus so large a human would not have the faculties or time to make sense of it. Topic models could help a scholar identify sources by linking documents via topics. Also a notable use, topic models can identify discourse analysis in a large corpora, such as 100 years of newspapers, and allow for analyzing key changes over time.\nThe findings of Lisa Rhody in “Topic Modeling and Figurative Language” are interesting but they also allow for a deeper understanding of topic models. She specifically states that between the “literary possibility held in a corpus of thousands of English-language poems” and the “computational rigor” of LDA, there is an interpretative space.5 The crux of her article centers around the topics contained in the poem “The Starry Night”. She points out that in its topic two, there are ‘intrusion’ words that only make sense in the list with a close reading of the poem. She then grouped poems based on the probability of topic two existing and found that although the top 15 poems with the highest topic probability did share a theme, the way they explore that theme is not encompassed by the topic. In that way, she shows that topic modeling coupled with close reading is an effective way to handle certain errors of topic modeling and LDA.\nAnother study that utilizes topic modeling in a novel way was Jo Guldi and Benjamin Williams’ “Synthesis and Large-Scale Textual Corpora: A Nested Topic Model of Britain’s Debates over Landed Property in the Nineteenth Century”. In the project they use what they call ‘nested topic models’ of nineteenth-century debates of Great Britain’s House of Commons and House of Lords. In essence, nested topic models are simply topic models that are grouped into hierarchical topics. For example, the topic voting could be nested in the topic of politics. In their study, they found that by nesting topics they could find varying levels of specificity in their topics which allowed for connecting topics to temporal events. In their own words, nesting topics allows for the “potential of better understanding hierarchical and governing relationships between large-scale concepts at the macro-level and actual events at the micro-level”.6 Image Credit: Jo Guldi, and Benjamin Williams. “Synthesis and Large-Scale Textual Corpora: A Nested Topic Model of Britain’s Debates over Landed Property in the Nineteenth Century.” Current Research in Digital History 1 (2018). https://doi.org/10.31835/crdh.2018.01.\nThe nested topic model concept could easily be applied to my own research. What I would do is topic model a newspaper that ran from 1754 to 1783, and determine the larger key topics. For example, I have no doubt politics would be a larger topic that would fit the scale of the time frame. Then attempt to discover the nested topics in order to glean political shifts. As an easy example, words like stamps, paper, or taxes would fit a topic under politics in 1766 but in 1776 politics might include things like tyranny and freedom. These are just the intuitive proof of concept examples, the hope would be that the actual practice of nested topics would provide new or novel ways of understanding discourses between 1754 and 1783.\nBibliography Brett, Megan R. “Topic Modeling: A Basic Introduction.” Journal of Digital Humanities 2, no. 1 (2012). https://journalofdigitalhumanities.org/2-1/topic-modeling-a-basic-introduction-by-megan-r-brett/.\nGuldi, Jo, and Benjamin Williams. “Synthesis and Large-Scale Textual Corpora: A Nested Topic Model of Britain’s Debates over Landed Property in the Nineteenth Century.” Current Research in Digital History 1 (2018). https://doi.org/10.31835/crdh.2018.01.\nRhody, Lisa M. “Topic Modeling and Figurative Language.” Journal of Digital Humanities 2, no. 1 (2012). https://journalofdigitalhumanities.org/2-1/topic-modeling-and-figurative-language-by-lisa-m-rhody/.\nSchmidt, Benjamin M. “Words Alone.” Journal of Digital Humanities 2, no. 1 (2012). https://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/.\n“The Digital Humanities Contribution to Topic Modeling.” Journal of Digital Humanities 2, no. 1 (2012). https://journalofdigitalhumanities.org/2-1/dh-contribution-to-topic-modeling/.\nMegan R. Brett. “Topic Modeling: A Basic Introduction.” Journal of Digital Humanities 2, no. 1 (2012). https://journalofdigitalhumanities.org/2-1/topic-modeling-a-basic-introduction-by-megan-r-brett/. ↩︎\nBenjamin M. Schmidt. “Words Alone.” Journal of Digital Humanities 2, no. 1 (2012). https://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/. ↩︎\nSchmidt. “Words Alone”. ↩︎\nIn ”Words Alone: Dismantling Topic Models in the Humanities”, Ben Schmidt attempts to use topic modeling on ship logs to geolocate ship routes. ↩︎\nLisa M. Rhody. “Topic Modeling and Figurative Language.” Journal of Digital Humanities 2, no. 1 (2012). https://journalofdigitalhumanities.org/2-1/topic-modeling-and-figurative-language-by-lisa-m-rhody/. ↩︎\nGuldi. “Synthesis” ↩︎\n",
+  "wordCount" : "1106",
+  "inLanguage": "en",
+  "datePublished": "2025-03-29T07:29:52-05:00",
+  "dateModified": "2025-03-29T07:29:52-05:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://atworle.github.io/testsite/posts/topic-models/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Antonio Thomas Worley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://atworle.github.io/testsite/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://atworle.github.io/testsite/" accesskey="h" title="Antonio Thomas Worley (Alt + H)">Antonio Thomas Worley</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://atworle.github.io/testsite/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atworle.github.io/testsite/cv" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atworle.github.io/testsite/searchpage" title="Search Page">
+                    <span>Search Page</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Topic Models
+    </h1>
+    <div class="post-meta"><span title='2025-03-29 07:29:52 -0500 -0500'>March 29, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><img alt="exampleusesoftopicmodel" loading="lazy" src="/topicmodels.png"></p>
+<p>          Topic modeling is a complex method in theory but a fairly simple method in practice. In a conceptual sense, topic modeling consists of using algorithms to discover ‘topics’ in large bodies of text. In “Topic Modeling: A Basic Introduction”, Megan Brett explains topic modeling by referencing a twitter post during a conference which describes topic modeling as “a recurring pattern of co-occurring words”.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Ben Schmidt attributes the ‘ease’ and ‘intuitiveness’ of topic models to underlying assumptions of coherency and stability.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> Coherency meaning that the list produced by a topic model algorithm contains words that are coherent in a list together, and stability, meaning if a topic exists in two different types of texts, the algorithm will have the ability to identify it.</p>
+<p>          The theory for topic modeling is relatively complicated for what the topic modeling actually produces. In a technical sense, topic modeling is a word modeling algorithm that matches words which co-occur frequently together across documents. There are various algorithms that topic model however the Latent Dirichlet Allocation, or LDA, is the one used most by humanists.  LDA is a probabilistic model that functions based on two assumptions, that each document is a mix of topics and each topic is a mix of words. Probabilistic here means that the algorithm assigns probabilities for each word under a topic. So if election and president co-occur frequently then they will be grouped based on the probability that politics is a topic. There are varying levels of complexity to this process, for example you can select the number of topics and the number of words in each topic yourself and this can drastically alter the results.</p>
+<p>          It’s important to note a few things about this process. For one, the algorithm does not assign topic names, it simply groups words together. So the name of the topic is at the discretion of the researcher. Also, a document in this context is not necessarily a full document; it could be a paragraph or a page. However, the document is treated as a ‘bag of words’, meaning the order of the words does not factor into the algorithm’s calculation. Most importantly, as Schmidt points out, topic modeling only captures co-occurrence, it does not take into account the nuances of  syntax, rhetoric, or figurative language.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>          The possible uses are fairly distinct for history, however some scholars have attempted to discover new uses.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> The main utility of topic modeling lies in evaluating large corpuses, a corpus so large a human would not have the faculties or time to make sense of it. Topic models could help a scholar identify sources by linking documents via topics. Also a notable use, topic models can identify discourse analysis in a large corpora, such as 100 years of newspapers, and allow for analyzing key changes over time.</p>
+<p>          The findings of Lisa Rhody in “Topic Modeling and Figurative Language” are interesting but they also allow for a deeper understanding of topic models. She specifically states that between the “literary possibility held in a corpus of thousands of English-language poems” and the “computational rigor” of LDA, there is an interpretative space.<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> The crux of her article centers around the topics contained in the poem “The Starry Night”. She points out that in its topic two, there are ‘intrusion’ words that only make sense in the list with a close reading of the poem. She then grouped poems based on the probability of topic two existing and found that although the top 15 poems with the highest topic probability did share a theme, the way they explore that theme is not encompassed by the topic. In that way, she shows that topic modeling coupled with close reading is an effective way to handle certain errors of topic modeling and LDA.</p>
+<p>          Another study that utilizes topic modeling in a novel way was Jo Guldi and Benjamin Williams’ “Synthesis and Large-Scale Textual Corpora: A Nested Topic Model of Britain’s Debates over Landed Property in the Nineteenth Century”. In the project they use what they call ‘nested topic models’ of nineteenth-century debates of Great Britain’s House of Commons and House of Lords. In essence, nested topic models are simply topic models that are grouped into hierarchical topics. For example, the topic voting could be nested in the topic of politics. In their study, they found that by nesting topics they could find varying levels of specificity in their topics which allowed for connecting topics to temporal events. In their own words, nesting topics allows for the  “potential of better understanding hierarchical and governing relationships between large-scale concepts at the macro-level and actual events at the micro-level”.<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>
+<img alt="exampleoftopicmodelresultsandassignedtopics" loading="lazy" src="/topicmodelnested.png"><em>Image Credit: Jo Guldi, and Benjamin Williams. &ldquo;Synthesis and Large-Scale Textual Corpora: A Nested Topic Model of Britain’s Debates over Landed Property in the Nineteenth Century.&rdquo; Current Research in Digital History 1 (2018). <a href="https://doi.org/10.31835/crdh.2018.01">https://doi.org/10.31835/crdh.2018.01</a>.</em></p>
+<p>          The nested topic model concept could easily be applied to my own research. What I would do is topic model a newspaper that ran from 1754 to 1783, and determine the larger key topics. For example, I have no doubt politics would be a larger topic that would fit the scale of the time frame. Then attempt to discover the nested topics in order to glean political shifts. As an easy example, words like stamps, paper, or taxes would fit a topic under politics in 1766 but in 1776 politics might include things like tyranny and freedom. These are just the intuitive proof of concept examples, the hope would be that the actual practice of nested topics would provide new or novel ways of understanding discourses between 1754 and 1783.</p>
+<h2 id="bibliography">Bibliography<a hidden class="anchor" aria-hidden="true" href="#bibliography">#</a></h2>
+<p>Brett, Megan R. “Topic Modeling: A Basic Introduction.” Journal of Digital Humanities 2, no. 1 (2012). <a href="https://journalofdigitalhumanities.org/2-1/topic-modeling-a-basic-introduction-by-megan-r-brett/">https://journalofdigitalhumanities.org/2-1/topic-modeling-a-basic-introduction-by-megan-r-brett/</a>.</p>
+<p>Guldi, Jo, and Benjamin Williams. &ldquo;Synthesis and Large-Scale Textual Corpora: A Nested Topic Model of Britain’s Debates over Landed Property in the Nineteenth Century.&rdquo; Current Research in Digital History 1 (2018). <a href="https://doi.org/10.31835/crdh.2018.01">https://doi.org/10.31835/crdh.2018.01</a>.</p>
+<p>Rhody, Lisa M. “Topic Modeling and Figurative Language.” Journal of Digital Humanities 2, no. 1 (2012). <a href="https://journalofdigitalhumanities.org/2-1/topic-modeling-and-figurative-language-by-lisa-m-rhody/">https://journalofdigitalhumanities.org/2-1/topic-modeling-and-figurative-language-by-lisa-m-rhody/</a>.</p>
+<p>Schmidt, Benjamin M. “Words Alone.” Journal of Digital Humanities 2, no. 1 (2012). <a href="https://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/">https://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/</a>.</p>
+<p>“The Digital Humanities Contribution to Topic Modeling.” Journal of Digital Humanities 2, no. 1 (2012). <a href="https://journalofdigitalhumanities.org/2-1/dh-contribution-to-topic-modeling/">https://journalofdigitalhumanities.org/2-1/dh-contribution-to-topic-modeling/</a>.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Megan R. Brett. “Topic Modeling: A Basic Introduction.” Journal of Digital Humanities 2, no. 1 (2012). <a href="https://journalofdigitalhumanities.org/2-1/topic-modeling-a-basic-introduction-by-megan-r-brett/">https://journalofdigitalhumanities.org/2-1/topic-modeling-a-basic-introduction-by-megan-r-brett/</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Benjamin M. Schmidt. “Words Alone.” Journal of Digital Humanities 2, no. 1 (2012). <a href="https://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/">https://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/</a>.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Schmidt. “Words Alone”.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>In ”Words Alone: Dismantling Topic Models in the Humanities”, Ben Schmidt attempts to use topic modeling on ship logs to geolocate ship routes.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>Lisa M. Rhody. “Topic Modeling and Figurative Language.” Journal of Digital Humanities 2, no. 1 (2012). <a href="https://journalofdigitalhumanities.org/2-1/topic-modeling-and-figurative-language-by-lisa-m-rhody/">https://journalofdigitalhumanities.org/2-1/topic-modeling-and-figurative-language-by-lisa-m-rhody/</a>.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>Guldi. “Synthesis”&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://atworle.github.io/testsite/">Antonio Thomas Worley</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
+
